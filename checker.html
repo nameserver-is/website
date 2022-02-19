@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>NameServer.is - Home</title>
+  <title>NameServer.is - DNS Checker</title>
 
   <!-- Meta Tags -->
   <meta charset="utf-8">
@@ -60,35 +60,66 @@
   <div class="row" id="hero">
     <section>
       <h1><b style="color:#e74c3c">NAME</b> SERVER</h1>
+
       <h4>Welcome to NAMESERVER.IS!</h4>
       <p class="pasted">A Free and Open DNS Provider along with DNS Tools for the Masses.</p>
-      <li class="pbody">Currently we're in closed beta. If you wish to join please email us: <a href="mailto:beta [AT] nameserver [DOT] is">beta [AT] nameserver [DOT] is</a></li>
-      <blockquote>
-        <div style="overflow-x: auto;">
-          <table>
-            <tr>
-              <th>NAMESERVER's</th>
-              <th>IP ADDRESS's</th>
-            </tr>
-            <tr>
-              <td>NS.TYR.NAMESERVER.IS</td>
-              <td>198.251.86.86</td>
-            </tr>
-            <tr>
-              <td>NS.MIMIR.NAMESERVER.IS</td>
-              <td>198.251.86.69</td>
-            </tr>
-            <tr>
-              <td>NS.HEL.NAMESERVER.IS</td>
-              <td>198.251.90.90</td>
-            </tr>
-            <tr>
-              <td>NS.SJOFN.NAMESERVER.IS</td>
-              <td>198.251.90.69</td>
-            </tr>
-          </table>
+
+      <form action="#" method="post">
+      <div id="dropdownContainer">
+        <div class="dropdown-row">
+            <input class="input-dns" placeholder="www.example.com" name="dnsInput" type="text" maxlength="50"></input>
+                <div class="dropdown-box">
+                    <details class="custom-select">
+                    <summary class="radios">
+                        <input class="nameserver-dropdown" type="radio" name="dns_record" value="dns_a_record" id="dns_a_record" title="A Record" checked>
+                        <input class="nameserver-dropdown" type="radio" name="dns_record" value="dns_aaaa_record" id="dns_aaaa_record" title="AAAA Record">
+                        <input class="nameserver-dropdown" type="radio" name="dns_record" value="dns_cname_record" id="dns_cname_record" title="CNAME Record">
+                        <input class="nameserver-dropdown" type="radio" name="dns_record" value="dns_mx_record" id="dns_mx_record" title="MX Record">
+                        <input class="nameserver-dropdown" type="radio" name="dns_record" value="dns_ns_record" id="dns_ns_record" title="NS Record">
+                        <input class="nameserver-dropdown" type="radio" name="dns_record" value="dns_ptr_record" id="dns_ptr_record" title="PTR Record">
+                        <input class="nameserver-dropdown" type="radio" name="dns_record" value="dns_soa_record" id="dns_soa_record" title="SOA Record">
+                        <input class="nameserver-dropdown" type="radio" name="dns_record" value="dns_srv_record" id="dns_srv_record" title="SRV Record">
+                        <input class="nameserver-dropdown" type="radio" name="dns_record" value="dns_txt_record" id="dns_txt_record" title="TXT Record">
+                        <input class="nameserver-dropdown" type="radio" name="dns_record" value="dns_caa_record" id="dns_caa_record" title="CAA Record">
+                    </summary>
+                    <ul class="nameserver-dropdown list">
+                        <li class="nameserver-dropdown">
+                        <label for="dns_a_record" selected>A Record</label>
+                        </li>
+                        <li class="nameserver-dropdown">
+                            <label for="dns_aaaa_record">AAAA Record</label>
+                        </li>
+                        <li class="nameserver-dropdown">
+                            <label for="dns_cname_record">CNAME Record</label>
+                        </li>
+                        <li class="nameserver-dropdown">
+                            <label for="dns_mx_record">MX Record</label>
+                        </li>
+                        <li class="nameserver-dropdown">
+                            <label for="dns_ns_record">NS Record</label>
+                        </li>
+                        <li class="nameserver-dropdown">
+                            <label for="dns_ptr_record">PTR Record</label>
+                        </li>
+                        <li class="nameserver-dropdown">
+                            <label for="dns_soa_record">SOA Record</label>
+                        </li>
+                        <li class="nameserver-dropdown">
+                            <label for="dns_srv_record">SRV Record</label>
+                        </li>
+                        <li class="nameserver-dropdown">
+                            <label for="dns_txt_record">TXT Record</label>
+                        </li>
+                        <li class="nameserver-dropdown">
+                            <label for="dns_caa_record">CAA Record</label>
+                        </li>
+                    </ul>
+                    </details>
+                </div>
+            </div>
         </div>
-      </blockquote>
+        <button class="alert" type="submit" name="button">Submit</button>
+      </form>
     </section>
   </div>
   <!-- END PAGE CONTENT -->
